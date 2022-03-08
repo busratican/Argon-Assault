@@ -193,6 +193,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 8240300171560904146, guid: b09c19bbd31d8427e8240b614e6ae2b7, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8240300171560904146, guid: b09c19bbd31d8427e8240b614e6ae2b7, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 3985875941384764709}
+    - target: {fileID: 8240300171560904146, guid: b09c19bbd31d8427e8240b614e6ae2b7, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 3441620608628175440}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b09c19bbd31d8427e8240b614e6ae2b7, type: 3}
 --- !u!4 &1082642284778981733 stripped
@@ -341,6 +353,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69ba1dbe01b1a4978a71f787ea184039, type: 3}
+--- !u!1 &3985875941384764709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5808334634363428571, guid: 69ba1dbe01b1a4978a71f787ea184039, type: 3}
+  m_PrefabInstance: {fileID: 7479340572278727678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9176170170130279563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -470,3 +487,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69ba1dbe01b1a4978a71f787ea184039, type: 3}
+--- !u!1 &3441620608628175440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5808334634363428571, guid: 69ba1dbe01b1a4978a71f787ea184039, type: 3}
+  m_PrefabInstance: {fileID: 9176170170130279563}
+  m_PrefabAsset: {fileID: 0}
