@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+         
+    void OnCollisionEnter(Collision collision)
     {
-        
+        Invoke("ReloadLevel", 0.1f);
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
+         Invoke("ReloadLevel", 0.3f);
+    }
+
+    void ReloadLevel()
+    {
+        int currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentBuildIndex);
     }
 }
