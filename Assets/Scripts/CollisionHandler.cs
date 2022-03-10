@@ -5,15 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] float reloadDelay = 1f;
          
     void OnCollisionEnter(Collision collision)
     {
-        Invoke("ReloadLevel", 0.1f);
+        Invoke("ReloadLevel", reloadDelay);
     }
 
     void OnTriggerEnter(Collider other)
     {
-         Invoke("ReloadLevel", 0.3f);
+         Invoke("ReloadLevel", reloadDelay);
     }
 
     void ReloadLevel()
