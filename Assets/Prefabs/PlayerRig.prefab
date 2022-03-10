@@ -145,6 +145,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6974646301468502831}
     m_Modifications:
+    - target: {fileID: 106895827572275493, guid: b09c19bbd31d8427e8240b614e6ae2b7, type: 3}
+      propertyPath: CollisionModule.collisionMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4120012252566293863, guid: b09c19bbd31d8427e8240b614e6ae2b7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -247,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6730411875772344663, guid: b09c19bbd31d8427e8240b614e6ae2b7, type: 3}
       propertyPath: CollisionModule.collisionMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6730411875772344663, guid: b09c19bbd31d8427e8240b614e6ae2b7, type: 3}
       propertyPath: TrailModule.minVertexDistance
