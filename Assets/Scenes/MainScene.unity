@@ -233,7 +233,6 @@ GameObject:
   - component: {fileID: 359988856}
   - component: {fileID: 359988855}
   - component: {fileID: 359988859}
-  - component: {fileID: 359988860}
   - component: {fileID: 359988861}
   m_Layer: 0
   m_Name: Enemy
@@ -340,7 +339,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &359988860
+--- !u!114 &359988861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -352,22 +351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf2127d7041b947198f5579a5b805813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &359988861
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 359988854}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,6 +748,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3264734a22bcb4f32b123c23cc4848ae, type: 3}
+--- !u!198 &3883985788627409921 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3883985789758588165, guid: 3264734a22bcb4f32b123c23cc4848ae, type: 3}
+  m_PrefabInstance: {fileID: 3883985788627409920}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6974646302934113247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -772,6 +760,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3903328111295927046, guid: 9775effda3c7b4eb790b97055cda4146, type: 3}
+      propertyPath: explosionVFX
+      value: 
+      objectReference: {fileID: 3883985788627409921}
     - target: {fileID: 6974646301468502831, guid: 9775effda3c7b4eb790b97055cda4146, type: 3}
       propertyPath: m_RootOrder
       value: 2

@@ -5,16 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] ParticleSystem explosionVFX;
     [SerializeField] float reloadDelay = 1f;
-         
-    void OnCollisionEnter(Collision collision)
-    {
-        Invoke("ReloadLevel", reloadDelay);
-    }
-
+    [SerializeField] GameObject[] components;
     void OnTriggerEnter(Collider other)
     {
-         Invoke("ReloadLevel", reloadDelay);
+        StartCrashSequence();
+    }
+    void StartCrashSequence()
+    {
+        explosionVFX.Play();
+        GetComponent<PlayerController>().enabled = false;
+        foreach(GameObject gb in components)
+        {
+            gb.GetComponent<MeshRenderer>().enabled = false;
+        }
+        GetComponent<BoxCollider>().enabled = false;
+        Invoke("ReloadLevel", reloadDelay);
     }
 
     void ReloadLevel()
