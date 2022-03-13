@@ -8,6 +8,12 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] ParticleSystem explosionVFX;
     [SerializeField] float reloadDelay = 1f;
     [SerializeField] GameObject[] components;
+
+    void OnCollisionEnter(Collision collision)
+    {
+         StartCrashSequence();
+         Debug.Log("Collision");
+    }
     void OnTriggerEnter(Collider other)
     {
         StartCrashSequence();
