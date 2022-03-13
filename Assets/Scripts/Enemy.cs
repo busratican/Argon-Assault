@@ -31,7 +31,6 @@ public class Enemy : MonoBehaviour
         HitEnemy();
         if(hitPoint < 1)
         {
-           ProcessHit();
            KillEnemy(other);
         }
 
@@ -48,11 +47,7 @@ public class Enemy : MonoBehaviour
         GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
         vfx.transform.parent = parentGameObject.transform;
         Destroy(gameObject);
+         scoreBoard.IncreaseScore(pointAmount);
     }
 
-    private void ProcessHit()
-    {     
-        scoreBoard.IncreaseScore(pointAmount);
-  
-    }
 }
