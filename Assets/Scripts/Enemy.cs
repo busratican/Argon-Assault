@@ -6,15 +6,15 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathVFX;
     [SerializeField] GameObject hitVFX;
-    [SerializeField] Transform parent;
-
-    ScoreBoard scoreBoard;
     [SerializeField] int pointAmount = 15;
     [SerializeField] int hitPoint = 3;
+    GameObject parentGameObject;
+    ScoreBoard scoreBoard;
 
      void Start()
     {
         scoreBoard = FindObjectOfType<ScoreBoard>();
+        parentGameObject = GameObject.FindWithTag("SpawnAtRuntime");
         AddRigidBody();
     }
 
@@ -40,13 +40,13 @@ public class Enemy : MonoBehaviour
     private void HitEnemy()
     {
         GameObject hitVfx = Instantiate(hitVFX, transform.position, Quaternion.identity);
-        hitVfx.transform.parent = parent;
+        hitVfx.transform.parent = parentGameObject.transform;
         //Destroy(gameObject);
     }
     private void KillEnemy(GameObject other)
     {
         GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
-        vfx.transform.parent = parent;
+        vfx.transform.parent = parentGameObject.transform;
         Destroy(gameObject);
     }
 
