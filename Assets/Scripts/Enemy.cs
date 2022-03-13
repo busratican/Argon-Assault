@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathVFX;
@@ -47,7 +46,7 @@ public class Enemy : MonoBehaviour
         GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
         vfx.transform.parent = parentGameObject.transform;
         Destroy(gameObject);
-         scoreBoard.IncreaseScore(pointAmount);
+        scoreBoard.IncreaseScore(pointAmount);
     }
 
 }

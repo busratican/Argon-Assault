@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8229807963020059041}
   - component: {fileID: -3620135785272545403}
+  - component: {fileID: 7141448895477159016}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -61,9 +62,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3883985789758588163, guid: ecad44a9ae60b429f95e2130317ac23d, type: 3}
   hitVFX: {fileID: 3883985789758588163, guid: 13df50c97d78940b9b10993db2bd663e, type: 3}
-  parent: {fileID: 0}
   pointAmount: 15
   hitPoint: 3
+--- !u!65 &7141448895477159016
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224410735562838391}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &378915659650764421
 PrefabInstance:
   m_ObjectHideFlags: 0
