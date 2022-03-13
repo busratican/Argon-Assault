@@ -12,7 +12,6 @@ public class CollisionHandler : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
          StartCrashSequence();
-         Debug.Log("Collision");
     }
     void OnTriggerEnter(Collider other)
     {
